@@ -431,6 +431,23 @@ nav {
   inset-inline-start: -100% !important;
 }
 
+html[dir=rtl] header {
+  overflow: hidden;
+  background-image: none;
+  position: relative;
+}
+html[dir=rtl] header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(78deg);
+  top: 101%;
+  right: -55%;
+  background-image: url(../../../images/Shape\ 3\ copy.png);
+  background-repeat: no-repeat;
+}
+
 @media only screen and (min-width: 768px) {
   .drop-list {
     transition: all linear 0.3s;
