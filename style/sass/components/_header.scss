@@ -1,6 +1,6 @@
 header{
     background-color: $second-color;
-    background-image: url(../images/Shape\ 3\ copy.png);
+    background-image: url(../images/Shape\ 3\ copy.webp);
     background-repeat: no-repeat;
     background-position: -33% 245%;
     position: relative;
@@ -89,7 +89,10 @@ nav {
    
 }
 
-
+.logo img{
+    width: 230px;
+    height: 69px;
+}
 
 
 // scroll animated
@@ -174,7 +177,7 @@ html[dir= "rtl"]{
             transform: rotate(78deg);
             top: 101%;
             right: -55%;
-            background-image: url(../../../images/Shape\ 3\ copy.png);
+            background-image: url(../../../images/Shape\ 3\ copy.webp);
             background-repeat: no-repeat;
         }
     }
@@ -205,6 +208,7 @@ html[dir= "rtl"]{
 @include max-768{
     .logo img{
         width: 150px;
+        height: auto;
     }
     .list-item h4{
         cursor: pointer;
