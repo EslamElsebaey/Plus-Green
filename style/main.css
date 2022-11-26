@@ -468,7 +468,7 @@ html[dir=rtl] header::before {
 @media only screen and (max-width: 768px) {
   .logo img {
     width: 150px;
-    height: auto;
+    height: 45px;
   }
   .list-item h4 {
     cursor: pointer;
@@ -497,6 +497,7 @@ html[dir=rtl] header::before {
   }
   .header-desc .header-desc-img img {
     width: 200px;
+    height: 245.63px;
   }
   .header-desc .header-desc-details {
     order: 2;

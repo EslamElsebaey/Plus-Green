@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 const swiper = new Swiper(' .gallery .mySwiper', {
   loop: true,
-  autoplay: true,
+  // autoplay: true,
  
   pagination: {
     el: '.gallery .swiper-pagination',

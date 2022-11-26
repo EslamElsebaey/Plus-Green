@@ -208,7 +208,7 @@ html[dir= "rtl"]{
 @include max-768{
     .logo img{
         width: 150px;
-        height: auto;
+        height: 45px;
     }
     .list-item h4{
         cursor: pointer;
@@ -234,6 +234,7 @@ html[dir= "rtl"]{
         .header-desc-img{
             img{
                 width: 200px;
+                height: 245.63px;
             }
             order: 1;
         }
