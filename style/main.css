@@ -588,6 +588,7 @@ html[dir=rtl] header::before {
 @media only screen and (min-width: 1200px) {
   .header-desc-img img {
     max-width: 400px;
+    height: 491.25px;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -639,6 +640,11 @@ html[dir=rtl] header::before {
 
 html[dir=rtl] .plusgreen-desc h2 {
   margin-bottom: 17px;
+}
+
+.layer1 img, .layer2 img {
+  width: 93px;
+  height: 200px;
 }
 
 .leaf {

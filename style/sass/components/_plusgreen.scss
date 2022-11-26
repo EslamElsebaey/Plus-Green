@@ -39,7 +39,12 @@ html[dir = "rtl"] {
         margin-bottom: 17px;
     }
 }
-
+.layer1 , .layer2 {
+    img{
+        width: 93px;
+        height: 200px;
+    }
+}
 .leaf{
     position: absolute;
 }
