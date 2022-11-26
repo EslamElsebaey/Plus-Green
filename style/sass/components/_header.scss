@@ -1,0 +1,342 @@
+header{
+    background-color: $second-color;
+    background-image: url(../images/Shape\ 3\ copy.png);
+    background-repeat: no-repeat;
+    background-position: -33% 245%;
+    position: relative;
+    padding: 35px 0 80px  0;
+}
+.header-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.mynav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   > li {
+        margin-inline-start: 25px;
+        a{
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            transition: all linear .2s;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-desc-details { 
+    width: 50%;
+    h1{
+        font-size: 48px;
+        letter-spacing: -1px;
+        color: #303030;
+        font-weight: 800;
+    }
+    h2{
+        line-height: 45px;
+        font-size: 32px;
+    }
+}
+.header-desc-img{
+    img{
+        width: 100%;
+    }
+}
+
+
+.li-drop{
+    position: relative;
+}
+
+.drop-list{
+    top: 41px;
+    opacity: 0.9;
+    inset-inline-start: -9px;
+    position: absolute;
+    background-color: $main-color;
+    padding:  15px;
+    width: 185px;
+    opacity: 0;
+    visibility: hidden;
+    li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba($color: #e1fcb2, $alpha: .3) ;
+        a{
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    li:last-child{
+        border-bottom: none;
+    }
+   
+   
+}
+
+
+
+
+// scroll animated
+
+.scroll {
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    z-index: 1;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+    span {
+        width: 24px;
+        height: 45px;
+        position: relative;
+        border-radius: 12px;
+        border: 2px solid #ccc;
+        display: inline-block;
+        transition: all ease 0.3s;
+      }
+}
+
+
+  .scroll  span::after {
+    content: "";
+    width: 2px;
+    height: 10px;
+    background: #ccc;
+    top: 6px;
+    opacity: 0;
+    left: 48%;
+    position: absolute;
+    transform: translateX(-48%);
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+
+
+
+  .mynav{
+    transition: all linear .4s !important;
+  }
+.menu-bars{
+    display: none;
+    i {
+        font-size: 30px;
+    }
+   
+    cursor: pointer;
+}
+.menu-close{
+    display: none;
+    cursor: pointer;
+    i{
+        font-size: 30px;
+    }
+}
+
+.open-nav{
+    inset-inline-start: -100% !important;
+}
+
+
+
+//   media
+
+
+
+@include min-768{
+    .drop-list {
+        transition: all linear .3s;
+        display: block !important;
+    }
+    .li-drop{
+        &:hover .drop-list {
+            opacity: .9;
+            visibility: visible;
+        }
+    }
+}
+
+
+
+
+
+@include max-768{
+    .logo img{
+        width: 150px;
+    }
+    .list-item h4{
+        cursor: pointer;
+    }
+    .scroll {
+        bottom: 17px;
+    }
+    header {
+        height: 100vh;
+        padding: 25px 0 60px 0;
+    }
+    .header-desc-details h1{
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+    .header-desc-details h2{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .header-desc{
+        flex-direction: column;
+        padding-top: 20px;
+        .header-desc-img{
+            img{
+                width: 200px;
+            }
+            order: 1;
+        }
+        .header-desc-details{
+            order: 2;
+            padding: 40px 0;
+            text-align: center;
+        }
+    }
+    .drop-list li{
+        padding: 5px 0;
+    }
+    .li-drop {
+        .drop-list {
+           display: none;
+           visibility: visible;
+           opacity: .9;
+           position: static;
+           background-color: transparent;
+           a{
+            color: #303030;
+           }
+        }
+        .ancor-es{
+            position: relative;
+            &::after{
+                font-size: 20px;
+                content: "\f107";
+                position: absolute;
+                inset-inline-end: -15px;
+                top: 50%;
+                transform: translateY(-40%);
+                font-family: "line Awesome free";
+                font-weight: 900;
+                font-size: 11px;
+            }
+        }
+       
+       
+        
+    }
+    .menu-bars{
+        display: block;
+    }
+    .mynav{
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        overflow: auto;
+        height: 100%;
+        inset-inline-start: 0;
+        top: 0;        
+        background-color: $second-color;
+    }
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 25px;
+        inset-inline-end: 31px;
+    }
+    .mynav-list{
+        flex-direction: column;
+        padding-top: 60px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .mynav-list > li{
+        padding: 15px 0;
+    }
+}
+
+
+
+@include min-500{
+    .header-desc-img img{
+        width: 100%;
+    }
+}
+
+
+
+@include max-1200 {
+    .mynav-list > li{
+        margin-inline-start: 18px;
+    }
+    .header-desc-details{
+        width: 100%;
+    }
+    header{ 
+        background-position: -47% 2400%;
+    }
+}
+
+
+@include max-992 {
+    .mynav-list > li a{
+        font-size: 13px;
+    }
+    header{
+        background-image: none;
+    }
+}
+
+
+
+@include min-1200{
+    .header-desc-img{
+        img{
+            max-width: 400px;
+        }
+    }
+}
+
+
+@media (min-width : 992px) and (max-width : 1200px) {
+    .header-desc-details{
+        width: 95%;
+    }
+}
+
+@include min-992 {
+    .arabic{
+        margin-bottom: 7px;
+        display: block;
+    }
+}
+

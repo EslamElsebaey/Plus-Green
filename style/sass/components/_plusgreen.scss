@@ -1,0 +1,102 @@
+.plusgreen-desc{
+    position: relative;
+    text-align: center;
+    background-color: $white-color;
+    padding: 120px 0;
+    h2{
+        font-size: 43px;
+        color: #303030;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    h3{
+        color: $main-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 50px;
+        word-spacing: 8px;
+    }
+    p{
+        line-height: 38px;
+        margin: 0;
+        margin: 0 auto 50px auto;
+        font-size: 22px;
+        color: #303030;
+        text-align: center;
+        width: 80%;
+        
+    }
+    .green-btn{
+        display: inline-block;
+        outline: 1px solid $main-color;
+        border: none;
+    }
+}
+html[dir = "rtl"] {
+    .plusgreen-desc h2 {
+        margin-bottom: 17px;
+    }
+}
+
+.leaf{
+    position: absolute;
+}
+.layer1 , .layer2 {
+top: 50%;
+transform: translateY(-50%);
+}
+.layer1{
+    inset-inline-start: -90px;
+}
+.layer2{
+    inset-inline-end: -90px;
+}
+
+//  media query
+
+@include max-1200 {
+    .layer1{
+        left: -20px;
+    }
+    .layer2{
+        right: -20px;
+    }
+    html[dir = "rtl"] {
+        .layer1 {
+            left: 800px;
+        }
+        .layer2 {
+            right: 800px;
+        }
+    }
+}
+
+@include max-992 {
+    .leaf{
+        display: none;
+    }
+    .plusgreen-desc p{
+        width: 100%;
+    }
+}
+
+@include max-768{
+    .plusgreen-desc h2{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .plusgreen-desc h3{
+        font-size: 19px;
+        margin-bottom: 40px;
+    }
+    .plusgreen-desc p{
+        font-size: 17px;
+        line-height: 32px;
+        margin: 0 auto 40px auto;
+    }
+    .green-btn{
+       padding:  11px 23px ;
+    }
+}
